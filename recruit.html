@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採用情報｜株式会社BLAST</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="beacon-dot"></span>BLAST<small>BLAST Co., Ltd.</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="order.html">ロードサービスのご依頼</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="recruit.html">採用情報</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <button type="button" class="nav-cta" onclick="openQuickOrder(event)">今すぐ依頼する</button>
+      <button type="button" class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navToggle').classList.toggle('open');
+}
+</script>
+
+<div class="page-header">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">TOP</a> ／ 採用情報</p>
+    <h1>採用情報</h1>
+    <p style="color:rgba(246,244,239,0.75); max-width:56ch;">お車・バイクのトラブルでお困りの方の力になれる仕事です。</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap" style="max-width:760px;">
+    <p class="lead">地域のお客様に寄り添うロードサービスを目指し、少しずつ対応エリアを広げています。困っている方の力になりたい方、自分のペースで経験を積みたい方は、ぜひ一度お気軽にご連絡ください。やる気を何より重視した採用ですので、未経験の方も歓迎します。</p>
+
+    <h3 style="margin-top:40px;">募集職種</h3>
+    <p>ロードサービススタッフ</p>
+
+    <h3 style="margin-top:30px;">仕事内容</h3>
+    <p>バッテリー上がり対応、パンク対応、レッカー搬送、スタック救出、お客様対応　ほか</p>
+
+    <h3 style="margin-top:30px;">応募資格</h3>
+    <p>普通自動車免許（AT限定可）をお持ちの方<br>やる気のある方<br>経験者は優遇いたします</p>
+
+    <h3 style="margin-top:30px;">勤務地・働き方</h3>
+    <p>できる業務から少しずつお任せしていきますので、経験がない方もご安心ください。対応できる業務が増えるほど、働き方の自由度や収入も上がっていく仕組みです。基本的にはご自宅から現場への直行直帰となります。</p>
+
+    <h3 style="margin-top:30px;">給与</h3>
+    <p>面談のうえで決定します。経験者は優遇いたします。</p>
+
+    <h3 style="margin-top:30px;">応募方法</h3>
+    <p>お電話、または下記の応募フォームよりお気軽にご連絡ください。</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head">
+      <p class="eyebrow">FAQ</p>
+      <h2>よくあるご質問</h2>
+    </div>
+    <div style="margin-bottom:24px;">
+      <h4 style="font-size:15.5px; margin-bottom:6px;">入社前に取得しておいた方がよい資格はありますか？</h4>
+      <p style="color:var(--steel); margin:0;">資格の有無は問いません。現時点でお持ちの資格に応じて業務内容をご相談し、あわせて今後取得すると良い資格もご案内します。</p>
+    </div>
+    <div style="margin-bottom:24px;">
+      <h4 style="font-size:15.5px; margin-bottom:6px;">研修制度はありますか？</h4>
+      <p style="color:var(--steel); margin:0;">ございます。ご希望に応じて研修スケジュールを調整いたします。</p>
+    </div>
+    <div style="margin-bottom:24px;">
+      <h4 style="font-size:15.5px; margin-bottom:6px;">入社時期の相談はできますか？</h4>
+      <p style="color:var(--steel); margin:0;">もちろん可能です。ご無理のないスケジュールで準備を進めましょう。</p>
+    </div>
+    <div>
+      <h4 style="font-size:15.5px; margin-bottom:6px;">未経験ですが大丈夫でしょうか？</h4>
+      <p style="color:var(--steel); margin:0;">現在活躍しているスタッフの多くも未経験からのスタートです。不安な点は一緒に解決していきますので、ご安心ください。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="form-wrap" style="max-width:640px; margin:0 auto;">
+      <h2 style="font-size:22px; margin-bottom:6px;">応募フォーム</h2>
+      <p class="lead" style="margin-bottom:26px;">下記項目をご入力のうえ送信してください。担当より折り返しご連絡いたします。</p>
+
+      <form id="recruitForm" onsubmit="return handleRecruitSubmit(event)">
+        <div class="form-row">
+          <label>お名前<span class="req">必須</span></label>
+          <input type="text" required placeholder="山田 太郎">
+        </div>
+        <div class="form-cols">
+          <div class="form-row">
+            <label>電話番号<span class="req">必須</span></label>
+            <input type="tel" required placeholder="090-0000-0000">
+          </div>
+          <div class="form-row">
+            <label>メールアドレス</label>
+            <input type="email" placeholder="example@mail.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <label>メッセージ（任意）</label>
+          <textarea rows="4" placeholder="ご質問やアピールしたい点など、自由にご記入ください"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">応募する</button>
+        <p class="form-submit-note">※本フォームはプロトタイプです。実運用時は送信先メールサーバー、または採用管理システムとの連携が必要です。個人情報の取扱いについては<a href="privacy.html" style="text-decoration:underline;">プライバシーポリシー</a>をご確認ください。</p>
+      </form>
+
+      <div class="thanks-box" id="recruitThanks">
+        ご応募ありがとうございます。内容を確認のうえ、担当よりご連絡いたします。
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5 style="color:var(--beacon)">BLAST</h5>
+        <p style="font-size:13.5px; max-width:32ch;">株式会社BLASTは、事故・故障時のロードサービス（レッカー・搬送対応）を専門に、24時間365日お客さまのお車・バイクのトラブルに対応しています。</p>
+      </div>
+      <div>
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="company.html#other-business">その他の事業について</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="tokushoho.html">特定商取引法に基づく表示</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="order.html">ロードサービス依頼</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>緊急連絡先</h5>
+        <ul>
+          <li>0120-XXX-XXX</li>
+          <li>24時間365日受付</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BLAST Co., Ltd.</span>
+      <span>本サイトはプロトタイプです。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleRecruitSubmit(e){
+  e.preventDefault();
+  document.getElementById('recruitForm').style.display = 'none';
+  document.getElementById('recruitThanks').style.display = 'block';
+  return false;
+}
+</script>
+
+
+<div class="modal-overlay" id="quickOrderModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeQuickOrder()" aria-label="閉じる">×</button>
+    <h3>ご依頼方法を選択してください</h3>
+    <p>お急ぎの場合はお電話が最短です。お急ぎでない場合はWebフォームからもご依頼いただけます。</p>
+    <div class="modal-choice">
+      <a href="tel:0120XXXXXX" class="btn btn-primary">電話をかける（0120-XXX-XXX）</a>
+      <a href="order.html" class="btn btn-dark">Web依頼フォームへ進む</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openQuickOrder(e){
+  if(e) e.preventDefault();
+  document.getElementById('quickOrderModal').classList.add('open');
+}
+function closeQuickOrder(){
+  document.getElementById('quickOrderModal').classList.remove('open');
+}
+</script>
+
+</body>
+</html>

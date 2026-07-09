@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定商取引法に基づく表示｜株式会社BLAST</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="beacon-dot"></span>BLAST<small>BLAST Co., Ltd.</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="order.html">ロードサービスのご依頼</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="recruit.html">採用情報</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <button type="button" class="nav-cta" onclick="openQuickOrder(event)">今すぐ依頼する</button>
+      <button type="button" class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navToggle').classList.toggle('open');
+}
+</script>
+
+<div class="page-header">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">TOP</a> ／ 特定商取引法に基づく表示</p>
+    <h1>特定商取引法に基づく表示</h1>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <table class="reg-table" style="max-width:820px;">
+      <tr><th>販売業者</th><td>株式会社BLAST</td></tr>
+      <tr><th>運営統括責任者</th><td>ご請求をいただいた場合には、遅滞なく開示いたします。</td></tr>
+      <tr><th>所在地</th><td>〒000-0000　東京都豊島区〇〇 X-X-X</td></tr>
+      <tr><th>電話番号</th><td>03-XXXX-XXXX（平日9:00〜18:00）</td></tr>
+      <tr><th>メールアドレス</th><td>info@example.co.jp</td></tr>
+      <tr><th>販売価格</th><td>各サービスページに記載、またはお見積り時にご案内いたします。</td></tr>
+      <tr><th>商品代金以外の必要料金</th><td>出動料、搬送距離に応じた追加料金等（事前にご案内いたします）。</td></tr>
+      <tr><th>お支払い方法</th><td>現金、クレジットカード、各種QR決済（対応状況は現場により異なります）。</td></tr>
+      <tr><th>お支払い時期</th><td>サービス提供完了後、その場でのお支払いを原則とします。</td></tr>
+      <tr><th>サービス提供時期</th><td>ご依頼受付後、現場状況・交通状況を確認のうえ順次対応いたします。</td></tr>
+      <tr><th>キャンセル・返品について</th><td>出動後のキャンセルについては、出動料等が発生する場合があります。詳細はご依頼時にご確認ください。</td></tr>
+    </table>
+    <p style="margin-top:24px; color:var(--steel); font-size:13.5px; max-width:820px;">※本ページはプロトタイプのため一部項目を仮の内容としています。実運用にあたっては、正式な料金体系・キャンセルポリシーに基づき内容を確定してください。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5 style="color:var(--beacon)">BLAST</h5>
+        <p style="font-size:13.5px; max-width:32ch;">株式会社BLASTは、事故・故障時のロードサービス（レッカー・搬送対応）を専門に、24時間365日お客さまのお車・バイクのトラブルに対応しています。</p>
+      </div>
+      <div>
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="company.html#other-business">その他の事業について</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="tokushoho.html">特定商取引法に基づく表示</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="order.html">ロードサービス依頼</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>緊急連絡先</h5>
+        <ul>
+          <li>0120-XXX-XXX</li>
+          <li>24時間365日受付</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BLAST Co., Ltd.</span>
+      <span>本サイトはプロトタイプです。</span>
+    </div>
+  </div>
+</footer>
+
+
+<div class="modal-overlay" id="quickOrderModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeQuickOrder()" aria-label="閉じる">×</button>
+    <h3>ご依頼方法を選択してください</h3>
+    <p>お急ぎの場合はお電話が最短です。お急ぎでない場合はWebフォームからもご依頼いただけます。</p>
+    <div class="modal-choice">
+      <a href="tel:0120XXXXXX" class="btn btn-primary">電話をかける（0120-XXX-XXX）</a>
+      <a href="order.html" class="btn btn-dark">Web依頼フォームへ進む</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openQuickOrder(e){
+  if(e) e.preventDefault();
+  document.getElementById('quickOrderModal').classList.add('open');
+}
+function closeQuickOrder(){
+  document.getElementById('quickOrderModal').classList.remove('open');
+}
+</script>
+
+</body>
+</html>

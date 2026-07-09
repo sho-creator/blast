@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ｜株式会社BLAST</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="beacon-dot"></span>BLAST<small>BLAST Co., Ltd.</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="order.html">ロードサービスのご依頼</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="recruit.html">採用情報</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <button type="button" class="nav-cta" onclick="openQuickOrder(event)">今すぐ依頼する</button>
+      <button type="button" class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navToggle').classList.toggle('open');
+}
+</script>
+
+<div class="page-header">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">TOP</a> ／ お問い合わせ</p>
+    <h1>お問い合わせ</h1>
+    <p style="color:rgba(246,244,239,0.75);">ロードサービスのご依頼は<a href="order.html" style="text-decoration:underline;">専用フォーム</a>、採用に関するお問い合わせは<a href="recruit.html" style="text-decoration:underline;">採用情報ページ</a>をご利用ください。それ以外のお問い合わせは、こちらのフォームからお願いいたします。</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap grid grid-2" style="align-items:start;">
+    <div class="form-wrap">
+      <p class="lead" style="margin-bottom:24px;">下記フォームより必要事項をご入力のうえ、送信してください。</p>
+      <form id="contactForm" onsubmit="return handleContactSubmit(event)">
+        <div class="form-row">
+          <label>お名前<span class="req">必須</span></label>
+          <input type="text" required placeholder="山田 太郎">
+        </div>
+        <div class="form-row">
+          <label>メールアドレス<span class="req">必須</span></label>
+          <input type="email" required placeholder="example@mail.com">
+        </div>
+        <div class="form-row">
+          <label>メッセージ（任意）</label>
+          <textarea rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">送信する</button>
+        <p class="form-submit-note">※内容を確認後、担当者よりご連絡いたします。本フォームはプロトタイプのため、実運用時は送信先メールサーバーとの連携が必要です。</p>
+      </form>
+      <div class="thanks-box" id="contactThanks">
+        お問い合わせありがとうございます。内容を確認のうえ、担当より折り返しご連絡いたします。
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:20px;">
+        <h3>お電話でのお問い合わせ</h3>
+        <p>0120-XXX-XXX<br>24時間365日対応しております。</p>
+      </div>
+      <div class="card">
+        <h3>メールでのお問い合わせ</h3>
+        <p>左記フォームより必要事項をご入力のうえ送信してください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5 style="color:var(--beacon)">BLAST</h5>
+        <p style="font-size:13.5px; max-width:32ch;">株式会社BLASTは、事故・故障時のロードサービス（レッカー・搬送対応）を専門に、24時間365日お客さまのお車・バイクのトラブルに対応しています。</p>
+      </div>
+      <div>
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="company.html#other-business">その他の事業について</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="tokushoho.html">特定商取引法に基づく表示</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="order.html">ロードサービス依頼</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>緊急連絡先</h5>
+        <ul>
+          <li>0120-XXX-XXX</li>
+          <li>24時間365日受付</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BLAST Co., Ltd.</span>
+      <span>本サイトはプロトタイプです。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleContactSubmit(e){
+  e.preventDefault();
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('contactThanks').style.display = 'block';
+  return false;
+}
+</script>
+
+
+<div class="modal-overlay" id="quickOrderModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeQuickOrder()" aria-label="閉じる">×</button>
+    <h3>ご依頼方法を選択してください</h3>
+    <p>お急ぎの場合はお電話が最短です。お急ぎでない場合はWebフォームからもご依頼いただけます。</p>
+    <div class="modal-choice">
+      <a href="tel:0120XXXXXX" class="btn btn-primary">電話をかける（0120-XXX-XXX）</a>
+      <a href="order.html" class="btn btn-dark">Web依頼フォームへ進む</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openQuickOrder(e){
+  if(e) e.preventDefault();
+  document.getElementById('quickOrderModal').classList.add('open');
+}
+function closeQuickOrder(){
+  document.getElementById('quickOrderModal').classList.remove('open');
+}
+</script>
+
+</body>
+</html>

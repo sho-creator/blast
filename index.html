@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社BLAST｜24時間365日のロードサービス</title>
+<meta name="description" content="株式会社BLASTは、事故・故障時のロードサービス（レッカー・搬送対応）を専門に、24時間365日お客さまのお車・バイクのトラブルに対応します。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-fixed-bar">
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="beacon-dot"></span>BLAST<small>BLAST Co., Ltd.</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="order.html">ロードサービスのご依頼</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="recruit.html">採用情報</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <button type="button" class="nav-cta" onclick="openQuickOrder(event)">今すぐ依頼する</button>
+      <button type="button" class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navToggle').classList.toggle('open');
+}
+</script>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:var(--beacon)">24時間365日 出動対応</p>
+      <h1>止まった夜も、<br>私たちの<em>灯り</em>は消えない。</h1>
+      <p>事故・故障・バッテリー上がり——。予期せぬトラブルに、経験豊富なスタッフが最短ルートで駆けつけます。お車・バイクのことなら、まずはBLASTへ。</p>
+      <div class="hero-cta">
+        <a href="order.html" class="btn btn-primary">ロードサービスを依頼する</a>
+        <a href="#trouble" class="btn btn-ghost">対応できるトラブルを見る</a>
+      </div>
+      <div class="hero-badges">
+        <a href="#flow" class="badge" style="text-decoration:none;">ご依頼から出動までの流れ</a>
+        <a href="#voice" class="badge" style="text-decoration:none;">お客様の声</a>
+      </div>
+    </div>
+    <div class="hero-road">
+      <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0E1826"/>
+            <stop offset="100%" stop-color="#1D3157"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="340" fill="url(#skyGrad)" opacity="0"/>
+        <!-- road converging lines -->
+        <polygon points="0,340 400,340 260,150 140,150" fill="#182338"/>
+        <line x1="140" y1="150" x2="0" y2="340" stroke="rgba(246,244,239,0.18)" stroke-width="2"/>
+        <line x1="260" y1="150" x2="400" y2="340" stroke="rgba(246,244,239,0.18)" stroke-width="2"/>
+        <g opacity="0.55">
+          <rect x="192" y="330" width="16" height="10" fill="#F6F4EF"/>
+          <rect x="185" y="290" width="14" height="9" fill="#F6F4EF"/>
+          <rect x="179" y="255" width="12" height="8" fill="#F6F4EF"/>
+          <rect x="174" y="225" width="10" height="7" fill="#F6F4EF"/>
+        </g>
+        <!-- beacon -->
+        <circle cx="200" cy="150" r="7" fill="#F2A93B">
+          <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="200" cy="150" r="16" fill="none" stroke="#F2A93B" stroke-width="1.5" opacity="0.5">
+          <animate attributeName="r" values="10;28" dur="2.2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.55;0" dur="2.2s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="road-emergency fixed-bottom">
+  <div class="wrap">
+    <div><span class="label">お困りの方は今すぐお電話ください</span><br><span class="tel">0120-XXX-XXX（24時間受付）</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">WHY BLAST</p>
+      <h2>選ばれる、4つの理由</h2>
+      <p class="lead">お車・バイクのトラブルは、いつも突然。だからこそ<br>「早い・丁寧・誠実」を徹底しています。</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card"><h3>最短10分で駆け付け</h3><p>提携ネットワークと自社車両により、主要エリアへ迅速に駆けつけます。</p></div>
+      <div class="card"><h3>経験豊富なスタッフが対応</h3><p>その場での応急処置から搬送まで、経験豊富なスタッフが一貫対応。</p></div>
+      <div class="card"><h3>保険手続きも代行</h3><p>加入保険会社毎に最善なご提案、手続きサポートも行います。</p></div>
+      <div class="card"><h3>明朗な料金提示</h3><p>作業前に必ずお見積りをご提示。追加費用が発生する場合も事前にご説明します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="flow">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">FLOW</p>
+      <h2>ご依頼から出動までの流れ</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="num">01</span><h4>ご連絡</h4><p>お電話またはWebフォームで、現在地とお車・バイクの状態をお知らせください。</p></div>
+      <div class="step"><span class="num">02</span><h4>状況確認・お見積り</h4><p>症状をヒアリングし、概算料金と到着予定時刻をご案内します。</p></div>
+      <div class="step"><span class="num">03</span><h4>出動・応急対応</h4><p>スタッフが現場に急行し、応急処置または搬送を行います。</p></div>
+      <div class="step"><span class="num">04</span><h4>入庫・お支払い</h4><p>必要に応じて提携工場へ搬送。最善なお支払いプランもご提案いたします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="trouble">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">SERVICE</p>
+      <h2>対応できるトラブル</h2>
+      <p class="lead">下記以外のトラブルも、まずはご相談ください。</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="service-card main"><span class="tag">事故・故障</span><h3>事故・故障車両の搬送</h3><p>走行不能になった車両を、提携工場や指定の場所まで安全に搬送します。</p></div>
+      <div class="service-card"><span class="tag">バッテリー</span><h3>バッテリー上がり</h3><p>ジャンピングスタートによる応急対応。バッテリー交換のご相談も可能です。</p></div>
+      <div class="service-card"><span class="tag">脱輪・スタック</span><h3>脱輪・スタックからの引き上げ</h3><p>道路脇や溝への脱輪、雪道でのスタックなど、自走できなくなった状態からの引き上げに対応します。</p></div>
+      <div class="service-card"><span class="tag">タイヤ</span><h3>パンク・タイヤ交換</h3><p>スペアタイヤへの交換や、応急パンク修理に対応します。</p></div>
+      <div class="service-card"><span class="tag">燃料</span><h3>燃料切れ</h3><p>ガス欠時の燃料お届け・給油サポート。</p></div>
+      <div class="service-card"><span class="tag">車検</span><h3>車検取得代行</h3><p>車検切れの車両も対応可能です。</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-alt" id="voice">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">VOICE</p>
+      <h2>お客様の声</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="review-card">
+        <div class="review-top">
+          <div class="avatar-circle">K</div>
+          <div><div class="review-name">K様</div><div class="review-meta">40代・会社員</div></div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>深夜0時過ぎ、高速道路のパーキングエリアで急にエンジンがかからなくなり途方に暮れていましたが、電話をしてから本当にあっという間に駆けつけてくれました。作業中も「もう少しで終わりますね」と声をかけてもらえて、不安な気持ちがだいぶ和らぎました。深夜でも快く対応してもらえて本当に助かりました。</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="avatar-circle">M</div>
+          <div><div class="review-name">M様</div><div class="review-meta">30代・会社員</div></div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>出張先の慣れない土地でタイヤがパンクしてしまい、正直かなり焦っていました。電話口で状況を丁寧に聞いてもらえたおかげで落ち着くことができ、到着後もスペアタイヤへの交換をてきぱきと進めてもらえました。おかげさまでその日の商談にも間に合い、本当に感謝しています。</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="avatar-circle">S</div>
+          <div><div class="review-name">S様</div><div class="review-meta">50代・自営業</div></div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>雨の日にぬかるみへタイヤを取られてしまい、自分ではどうにもならず途方に暮れていました。連絡してから来てくれるまでの対応が早く、安全確認をしっかりしたうえで慎重に引き上げてくれたので、車にも傷ひとつつかずに済みました。仕事道具を積んでいたので本当に助かりました。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5 style="color:var(--beacon)">BLAST</h5>
+        <p style="font-size:13.5px; max-width:32ch;">株式会社BLASTは、事故・故障時のロードサービス（レッカー・搬送対応）を専門に、24時間365日お客さまのお車・バイクのトラブルに対応しています。</p>
+      </div>
+      <div>
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="company.html#other-business">その他の事業について</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="tokushoho.html">特定商取引法に基づく表示</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="order.html">ロードサービス依頼</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>緊急連絡先</h5>
+        <ul>
+          <li>0120-XXX-XXX</li>
+          <li>24時間365日受付</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BLAST Co., Ltd.</span>
+      <span>本サイトはプロトタイプです。</span>
+    </div>
+  </div>
+</footer>
+
+
+<div class="modal-overlay" id="quickOrderModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeQuickOrder()" aria-label="閉じる">×</button>
+    <h3>ご依頼方法を選択してください</h3>
+    <p>お急ぎの場合はお電話が最短です。お急ぎでない場合はWebフォームからもご依頼いただけます。</p>
+    <div class="modal-choice">
+      <a href="tel:0120XXXXXX" class="btn btn-primary">電話をかける（0120-XXX-XXX）</a>
+      <a href="order.html" class="btn btn-dark">Web依頼フォームへ進む</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openQuickOrder(e){
+  if(e) e.preventDefault();
+  document.getElementById('quickOrderModal').classList.add('open');
+}
+function closeQuickOrder(){
+  document.getElementById('quickOrderModal').classList.remove('open');
+}
+</script>
+
+</body>
+</html>

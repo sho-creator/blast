@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご依頼・お見積り｜株式会社BLAST</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-fixed-bar">
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="beacon-dot"></span>BLAST<small>BLAST Co., Ltd.</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="order.html">ロードサービスのご依頼</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="recruit.html">採用情報</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <button type="button" class="nav-cta" onclick="openQuickOrder(event)">今すぐ依頼する</button>
+      <button type="button" class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navToggle').classList.toggle('open');
+}
+</script>
+
+<div class="page-header">
+  <div class="wrap">
+    <h1>ロードサービスのご依頼</h1>
+    <p style="color:rgba(246,244,239,0.75);">緊急時はお電話が最短です。お急ぎでない場合はWebフォームからもご依頼いただけます。</p>
+  </div>
+</div>
+
+<div class="road-emergency fixed-bottom">
+  <div class="wrap">
+    <div><span class="label">お急ぎの場合はこちら</span><br><span class="tel">0120-XXX-XXX（24時間受付）</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap grid grid-2" style="align-items:start;">
+    <div class="form-wrap">
+      <h2 style="font-size:22px; margin-bottom:6px;">Web依頼フォーム</h2>
+      <p class="lead" style="margin-bottom:26px;">下記項目をご入力のうえ送信してください。内容確認後、担当より折り返しご連絡いたします。</p>
+
+      <form id="orderForm" onsubmit="return handleOrderSubmit(event)">
+        <div class="form-row">
+          <label>お名前<span class="req">必須</span></label>
+          <input type="text" id="f_name" required placeholder="山田 太郎">
+        </div>
+        <div class="form-cols">
+          <div class="form-row">
+            <label>電話番号<span class="req">必須</span></label>
+            <input type="tel" id="f_tel" required placeholder="090-0000-0000">
+          </div>
+          <div class="form-row">
+            <label>メールアドレス</label>
+            <input type="email" id="f_email" placeholder="example@mail.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <label>現在地（住所・目印など）<span class="req">必須</span></label>
+          <input type="text" id="f_location" required placeholder="例）横浜市〇〇区〇〇交差点付近">
+        </div>
+        <div class="form-cols">
+          <div class="form-row">
+            <label>車種<span class="req">必須</span></label>
+            <input type="text" id="f_car" required placeholder="例）トヨタ プリウス">
+          </div>
+          <div class="form-row">
+            <label>車両ナンバー</label>
+            <input type="text" id="f_carnum" placeholder="例）横浜300 あ12-34">
+          </div>
+        </div>
+        <div class="form-row">
+          <label>ご希望日時</label>
+          <input type="text" id="f_datetime" placeholder="例）今すぐ／本日15時ごろ">
+        </div>
+        <div class="form-row">
+          <label>症状・ご依頼内容<span class="req">必須</span></label>
+          <select id="f_symptom" required>
+            <option value="">選択してください</option>
+            <option>事故・故障による搬送</option>
+            <option>バッテリー上がり</option>
+            <option>タイヤのパンク・交換</option>
+            <option>燃料切れ</option>
+            <option>脱輪・スタック</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>詳細・ご要望</label>
+          <textarea rows="4" id="f_detail" placeholder="状況を詳しくご記入ください"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">この内容で依頼する</button>
+        <p class="form-submit-note">※送信すると、入力内容を記載したメールがお使いのメールアプリで作成されます。内容をご確認のうえ、そのまま送信してください。メールアプリが自動で開かない場合は、お手数ですがお電話にてご連絡ください。</p>
+      </form>
+
+      <div class="thanks-box" id="orderThanks">
+        メールアプリを起動しました。内容をご確認のうえ、そのまま送信してください。届き次第、担当より折り返しご連絡いたします。お急ぎの場合はお電話（0120-XXX-XXX）をご利用ください。
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:20px;">
+        <h3>対応エリア</h3>
+        <p>東京都、神奈川県、埼玉県、群馬県、山梨県、長野県。その他の隣接エリアについても、ご相談内容によって対応可能な場合がございます。まずはお問い合わせください。</p>
+      </div>
+      <div class="card" style="margin-bottom:20px;">
+        <h3>料金の目安</h3>
+        <p>基本出動料　8,800円〜<br>作業内容により料金は変動し、上記金額より安くなる場合もございます。お見積りは無料です。作業前に必ずご案内します。</p>
+      </div>
+      <div class="card">
+        <h3>お支払い方法</h3>
+        <p>現金／クレジットカード／各種QR決済に対応（現場により異なります）。スムーズにご案内するため、作業開始前に対応スタッフへお支払い方法をお伝えいただけますと助かります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="case-studies">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">CASE STUDIES</p>
+      <h2>対応事例</h2>
+      <p class="lead">スタッフの現場経験をもとにした対応事例をご紹介します。</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="case-card">
+        <span class="case-tag">バッテリー上がり</span>
+        <h3>深夜の高速道路で立ち往生</h3>
+        <p>サービスエリアでエンジンがかからなくなったお客様からご連絡。ジャンピングスタートで応急対応し、短時間で走行可能な状態に。</p>
+      </div>
+      <div class="case-card">
+        <span class="case-tag">車両搬送</span>
+        <h3>事故で自走不能になった車両の搬送</h3>
+        <p>衝突事故で走行できなくなった車両を、安全を確認したうえで指定の整備工場まで搬送。保険会社への連絡もあわせてサポート。</p>
+      </div>
+      <div class="case-card">
+        <span class="case-tag">タイヤトラブル</span>
+        <h3>出先でのパンクにその場で対応</h3>
+        <p>外出先でタイヤがパンクしたお客様に対し、現場でスペアタイヤへの交換作業を実施。安心して目的地まで走行いただける状態に。</p>
+      </div>
+      <div class="case-card">
+        <span class="case-tag">脱輪・スタック</span>
+        <h3>道路脇の溝に脱輪してしまったお車の引き上げ</h3>
+        <p>片輪を道路脇の溝に落としてしまったお客様からのご依頼。周囲の安全を確保したうえで、ウインチを使用して車両を引き上げました。</p>
+      </div>
+      <div class="case-card">
+        <span class="case-tag">燃料切れ</span>
+        <h3>ガス欠での立ち往生に対応</h3>
+        <p>走行中にガス欠となったお客様へ、燃料をお届けし現場で給油。その後は問題なく走行いただける状態に。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5 style="color:var(--beacon)">BLAST</h5>
+        <p style="font-size:13.5px; max-width:32ch;">株式会社BLASTは、事故・故障時のロードサービス（レッカー・搬送対応）を専門に、24時間365日お客さまのお車・バイクのトラブルに対応しています。</p>
+      </div>
+      <div>
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="company.html#other-business">その他の事業について</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="tokushoho.html">特定商取引法に基づく表示</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="order.html">ロードサービス依頼</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>緊急連絡先</h5>
+        <ul>
+          <li>0120-XXX-XXX</li>
+          <li>24時間365日受付</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BLAST Co., Ltd.</span>
+      <span>本サイトはプロトタイプです。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleOrderSubmit(e){
+  e.preventDefault();
+
+  var name = document.getElementById('f_name').value;
+  var tel = document.getElementById('f_tel').value;
+  var email = document.getElementById('f_email').value;
+  var location = document.getElementById('f_location').value;
+  var car = document.getElementById('f_car').value;
+  var carnum = document.getElementById('f_carnum').value;
+  var datetime = document.getElementById('f_datetime').value;
+  var symptom = document.getElementById('f_symptom').value;
+  var detail = document.getElementById('f_detail').value;
+
+  var subject = 'ロードサービス依頼（Webフォーム）／' + name + '様';
+  var body =
+    'お名前：' + name + '\n' +
+    '電話番号：' + tel + '\n' +
+    'メールアドレス：' + email + '\n' +
+    '現在地：' + location + '\n' +
+    '車種：' + car + '\n' +
+    '車両ナンバー：' + carnum + '\n' +
+    'ご希望日時：' + datetime + '\n' +
+    '症状・ご依頼内容：' + symptom + '\n' +
+    '詳細・ご要望：' + detail;
+
+  var mailto = 'mailto:rescue@maruauto-office.com'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body=' + encodeURIComponent(body);
+
+  window.location.href = mailto;
+
+  document.getElementById('orderForm').style.display = 'none';
+  document.getElementById('orderThanks').style.display = 'block';
+  return false;
+}
+</script>
+
+
+<div class="modal-overlay" id="quickOrderModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeQuickOrder()" aria-label="閉じる">×</button>
+    <h3>ご依頼方法を選択してください</h3>
+    <p>お急ぎの場合はお電話が最短です。お急ぎでない場合はWebフォームからもご依頼いただけます。</p>
+    <div class="modal-choice">
+      <a href="tel:0120XXXXXX" class="btn btn-primary">電話をかける（0120-XXX-XXX）</a>
+      <a href="order.html" class="btn btn-dark">Web依頼フォームへ進む</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openQuickOrder(e){
+  if(e) e.preventDefault();
+  document.getElementById('quickOrderModal').classList.add('open');
+}
+function closeQuickOrder(){
+  document.getElementById('quickOrderModal').classList.remove('open');
+}
+</script>
+
+</body>
+</html>

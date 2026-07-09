@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>会社概要｜株式会社BLAST</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="beacon-dot"></span>BLAST<small>BLAST Co., Ltd.</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="order.html">ロードサービスのご依頼</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="recruit.html">採用情報</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <button type="button" class="nav-cta" onclick="openQuickOrder(event)">今すぐ依頼する</button>
+      <button type="button" class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navToggle').classList.toggle('open');
+}
+</script>
+
+<div class="page-header">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">TOP</a> ／ 会社概要</p>
+    <h1>会社概要</h1>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="grid grid-2" style="align-items:start;">
+      <div>
+        <p class="eyebrow">MESSAGE</p>
+        <h2>「困った」に、いちばん早く<br>寄り添う会社でありたい。</h2>
+        <p class="lead">お車・バイクのトラブルは、時間も場所も選びません。私たちはロードサービスの現場経験が豊富なスタッフを中心に、お客さまのお車・バイクのトラブルにいちばん早く、誠実に対応できる体制を整えてきました。どんなときも迅速に、丁寧に。それが私たちの変わらない姿勢です。</p>
+      </div>
+      <table class="reg-table">
+        <tr><th>商号</th><td>株式会社BLAST</td></tr>
+        <tr><th>所在地</th><td>東京都豊島区東池袋</td></tr>
+        <tr><th>電話番号</th><td>ー</td></tr>
+        <tr><th>FAX番号</th><td>ー</td></tr>
+        <tr><th>保有車両</th><td>積載車　6台<br>2tトラック　1台<br>1tトラック　2台<br>軽トラック　1台<br>軽バン　4台　ほか</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="other-business">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">OTHER BUSINESS</p>
+      <h2>その他の事業について</h2>
+      <p class="lead">主力であるロードサービス事業のほか、下記の事業も行っております。詳細はお気軽にお問い合わせください。</p>
+    </div>
+    <div class="card" style="padding:32px 36px;">
+      <ul style="margin:0; padding-left:1.2em; color:var(--steel); font-size:14.5px; line-height:2;">
+        <li>自動車・自動二輪車の販売・仲介</li>
+        <li>自動車・自動二輪車部品の販売・仲介</li>
+        <li>不動産の売買・仲介</li>
+        <li>モビリティ事業</li>
+        <li>害虫駆除サービス</li>
+        <li>ドライビングスクール事業　ほか</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5 style="color:var(--beacon)">BLAST</h5>
+        <p style="font-size:13.5px; max-width:32ch;">株式会社BLASTは、事故・故障時のロードサービス（レッカー・搬送対応）を専門に、24時間365日お客さまのお車・バイクのトラブルに対応しています。</p>
+      </div>
+      <div>
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="company.html#other-business">その他の事業について</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="tokushoho.html">特定商取引法に基づく表示</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="order.html">ロードサービス依頼</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>緊急連絡先</h5>
+        <ul>
+          <li>0120-XXX-XXX</li>
+          <li>24時間365日受付</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BLAST Co., Ltd.</span>
+      <span>本サイトはプロトタイプです。</span>
+    </div>
+  </div>
+</footer>
+
+
+<div class="modal-overlay" id="quickOrderModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeQuickOrder()" aria-label="閉じる">×</button>
+    <h3>ご依頼方法を選択してください</h3>
+    <p>お急ぎの場合はお電話が最短です。お急ぎでない場合はWebフォームからもご依頼いただけます。</p>
+    <div class="modal-choice">
+      <a href="tel:0120XXXXXX" class="btn btn-primary">電話をかける（0120-XXX-XXX）</a>
+      <a href="order.html" class="btn btn-dark">Web依頼フォームへ進む</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openQuickOrder(e){
+  if(e) e.preventDefault();
+  document.getElementById('quickOrderModal').classList.add('open');
+}
+function closeQuickOrder(){
+  document.getElementById('quickOrderModal').classList.remove('open');
+}
+</script>
+
+</body>
+</html>
